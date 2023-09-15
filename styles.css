@@ -1,0 +1,280 @@
+*{
+  margin: 0%;
+}
+
+body, html{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, #ffff66 0%, #9999ff 100%);
+  overflow: auto;
+}
+
+.mob{
+  display: none;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  height: inherit;
+  width: inherit;
+}
+
+.container h3{
+  text-align: center;
+}
+
+.container > div:first-of-type{
+  display: flex;
+  align-items: flex-end;
+  height: 20%;
+  font-size: x-large;
+}
+
+.container div h1{
+  width: fit-content;
+  margin: 30% auto 0 ;
+  overflow: hidden;
+  border-bottom: solid 1px;
+}
+
+.container div h1 span{
+  display: inline-block;
+  padding: 2px;
+  transform: translateY(70px);
+  animation: move 3s linear infinite;
+}
+
+/* start of span aniamtion */
+
+@keyframes move{
+  0%{transform: translateY(70px);}
+  25%{transform: translateY(0px);}
+  100%{transform: translateY(0px);}
+}
+
+.container div h1 span:nth-child(2){
+  animation-delay: 0.2s ;
+}
+
+.container div h1 span:nth-child(3){
+  animation-delay:0.4s ;
+}
+
+.container div h1 span:nth-child(4){
+  animation-delay:.6s ;
+}
+
+.container div h1 span:nth-child(5){
+  animation-delay:.8s ;
+}
+
+.container div h1 span:nth-child(6){
+  animation-delay:1s ;
+}
+
+.container div h1 span:nth-child(7){
+  animation-delay:1.2s ;
+}
+
+.container div h1 span:nth-child(8){
+  animation-delay:1.4s ;
+}
+
+.container div h1 span:nth-child(9){
+  animation-delay:1.6s ;
+}
+
+.container div h1 span:nth-child(10){
+  animation-delay:1.8s ;
+}
+
+.container div h1 span:nth-child(11){
+  animation-delay:2s ;
+}
+
+.container div h1 span:nth-child(12){
+  animation-delay:2.2s ;
+}
+
+.container div h1 span:nth-child(13){
+  animation-delay:2.4s ;
+}
+
+.container div h1 span:nth-child(14){
+  animation-delay:2.6s ;
+}
+
+/* end of span animation */
+
+.container_parent{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+  width: inherit;
+}
+
+#student{
+  border: solid;
+  animation: here 1.5s infinite;
+}
+
+@keyframes here{
+  from{border: solid 1px;}
+  to{border:none;}
+}
+
+.labs{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px;
+  width: 150%;
+  height: 150%;
+}
+
+
+.h{
+  display: flex;
+  width: 50%;
+  margin-top: 50px;
+}
+  
+button{
+  width: 60px;
+  background-color: white;
+  border-radius: 6px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: lightcyan;
+  transform: scale(1.2);
+}
+
+table{
+  display: flex;
+  flex-direction:column;
+  max-width: 420px;
+  justify-content: center;
+}
+
+th{
+  width: 70px;
+}
+td{
+  width: 65.6px;
+  display:flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+tr{
+  display: flex;
+  flex-direction: row;
+}
+
+tbody{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+td{
+  display: flex;
+}
+
+label:checked{
+  border: solid 2px;
+}
+
+button:nth-child(3){
+  border: none;
+  margin-bottom: 25px;
+  width: 7%;
+  height: 6%;
+  font-size: 20px;
+}
+
+button:nth-child(3):hover{
+  background-color: lightcoral;
+}
+
+.between{
+  border-right: solid 1px ;
+  height: 50%;
+}
+
+td:hover{
+  background-color: lightgreen;
+}
+
+
+@media (max-width:1000px){
+  .container_parent{
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .h{
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+
+}
+
+@media (max-width:600px){
+  .container{
+    align-items: flex-start;
+  }
+
+  .container_parent{
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+  }
+  
+  .labs{
+    height: 90%;
+    border-bottom: solid 1px;
+    padding-bottom: 0;
+  }
+  
+  .h{
+    margin: 0;
+  }
+
+  button{
+    display: none;
+  }
+
+  .mob{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mob button{
+    display: block;
+    width: 20%;
+    height: 20%;
+    font-size: 14px;
+    border: solid 1px;
+  }
+
+  .mob button:nth-child(3):hover{
+    background-color: lightcoral;
+  }
+}

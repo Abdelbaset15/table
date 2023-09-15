@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Scores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7124742337.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+ 
+    <div class="container">
+       <div> <h1><span>s</span><span>t</span><span>u</span><span>d</span><span>e</span><span>n</span><span>t</span><span>s</span> <span>s</span><span>c</span><span>o</span><span>r</span><span>e</span><span>s</span></h1></div>
+        <div class="container_parent">
+            <div>
+            <label for="">
+                <i class="fa fa-user"></i>
+                Student Name
+            </label>
+            <input type="text" id="student" />
+
+            <h3>Scores</h3>
+
+            <div class="labs">
+                <label for="ar">Arabic</label>
+                <input type="text" id="ar" />
+                
+                <label for="en">English</label>
+                <input type="text" id="en" />
+                
+                <label for="hs">History</label>
+                <input type="text" id="hs" />
+                
+                <label for="sc">Science</label>
+                <input type="text" id="sc" />
+                
+                <label for="ge">Germany</label>
+                <input type="text" id="ge" />
+                <button onclick="add()">Add</button>
+                <button onclick="dele()"> delete </button>
+                <div class="mob">
+                    <button onclick="add()">Add</button>
+                    <button onclick="dele()"> delete </button>
+                    <button onclick="reset()">reset</button>                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="between"></div>
+        
+       <div class="h">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Arabic</th>
+                    <th>English</th>
+                    <th>History</th>
+                    <th>Science</th>
+                    <th>Germany</th>
+                </tr>
+            </thead>
+            
+            <tbody id="scores"></tbody>
+        </table>
+    </div>
+</div> 
+                <button onclick="reset()">reset</button>
+</div>
+<script>
+        const add =function () {
+          const new_student = student.value;
+          scores.innerHTML += `<tr> <td> ${new_student} </td> </tr>`
+          const new_ar = ar.value
+          scores.innerHTML += `<td>${new_ar}</td>`
+          const new_en = en.value
+          scores.innerHTML += `<td>${new_en}</td>`
+         const new_hs = hs.value
+          scores.innerHTML += `<td>${new_hs}</td>`
+         const new_sc = sc.value
+          scores.innerHTML += `<td>${new_sc}</td>`
+         const new_ge = ge.value
+          scores.innerHTML += `<td>${new_ge}</td>`
+          
+        }
+          
+          const dele = function(){
+            student.value =""
+            ar.value = ""
+            en.value =""
+            hs.value =""
+            sc.value =""
+            ge.value =""
+          }
+          
+
+          const reset = function(){
+            scores.innerHTML = scores.value =''
+            student.value =""
+            ar.value = ""
+            en.value =""
+            hs.value =""
+            sc.value =""
+            ge.value =""
+          }
+          
+ 
+
+
+    </script>
+</body>
+
+</html>
